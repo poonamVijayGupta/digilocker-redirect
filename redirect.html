@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redirecting to App...</title>
+    <script>
+      window.onload = function () {
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get("code");
+
+        if (code) {
+          // Your app's deep link scheme
+          const redirectURL = `myapp://callback?code=${code}`;
+          window.location.href = redirectURL;
+        } else {
+          document.body.innerHTML = "No code parameter found!";
+        }
+      };
+    </script>
+  </head>
+  <body>
+    Redirecting to your app...
+  </body>
+</html>
