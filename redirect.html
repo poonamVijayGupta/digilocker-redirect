@@ -9,7 +9,7 @@
 
         if (code) {
           // Your app's deep link scheme
-          const redirectURL = `myapp://callback?code=${code}`;
+          const redirectURL = `truelymyid://callback?code=${code}`;
           window.location.href = redirectURL;
         } else {
           document.body.innerHTML = "No code parameter found!";
